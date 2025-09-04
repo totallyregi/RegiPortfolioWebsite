@@ -1,103 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reginald Lucas Yang Li Di - Portfolio</title>
+    <meta name="description" content="Reginald Lucas Yang Li Di - Information Systems Student, Blockchain Developer, Tech Enthusiast">
+    <meta name="author" content="Reginald Lucas Yang Li Di">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-            <a class="navbar-brand" href="#">Portfolio</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Regi Yang</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 align-items-center my-5">
-            <div class="col-lg-7">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="images/profile.JPG" alt="Profile Picture" style="width: 600px; height: 400px; object-fit: cover;">
-            </div>
-            <div class="col-lg-5">
-                <h1 class="font-weight-light">Reginald Lucas Yang Li Di</h1>
-                <p>Hi, I'm Regi, a Year 2 undergraduate at the National University of Singapore (NUS), pursuing a degree in Information Systems.</p>
-                <a class="btn btn-primary" href="https://www.linkedin.com/in/reginald-yang-75005a267/">Connect with me!</a>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold text-gradient">Reginald Lucas Yang Li Di</h1>
+                        <h2 class="h3 text-muted mb-4">Information Systems Student & Blockchain Developer</h2>
+                        <p class="lead mb-4">Passionate about technology and innovation, building solutions that solve real-world problems. Deeply interested in Web3 and blockchain technologies.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary btn-lg me-3">Get In Touch</a>
+                            <a href="#projects" class="btn btn-outline-primary btn-lg">View Projects</a>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="https://www.linkedin.com/in/reginald-yang-75005a267/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:totallyregi@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:+6596785748" class="social-link">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image">
+                        <img src="images/profile.JPG" alt="Reginald Yang" class="img-fluid rounded-circle shadow-lg">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
 
-    <!-- Passion Statement -->
-    <div class="card text-white bg-secondary my-5 py-4 text-center">
-        <div class="card-body">
-            <p class="text-white m-0">I'm passionate about technology, software development, and innovation. With a strong interest in web development, blockchain, and fintech, I enjoy building solutions that enhance user experiences and drive efficiency.</p>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <h3 class="mb-4">Hi, I'm Regi!</h3>
+                        <p class="lead mb-4">I'm a Year 2 undergraduate at the National University of Singapore (NUS), pursuing a degree in Information Systems. I'm passionate about technology and innovation, always looking for opportunities to build projects that solve real-world problems.</p>
+                        <p class="mb-4">With a deep interest in Web3 and blockchain, I hope to further delve into this field in the future while continuing to explore innovative tech solutions.</p>
+                        <div class="education-info">
+                            <h4 class="mb-3">Education</h4>
+                            <div class="education-item">
+                                <h5>National University of Singapore (NUS)</h5>
+                                <p class="text-muted">Information Systems • Aug 2023 - Present</p>
+                            </div>
+                            <div class="education-item">
+                                <h5>Nanyang Junior College (NYJC)</h5>
+                                <p class="text-muted">Feb 2019 - Nov 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-stats">
+                        <div class="row">
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">3+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">10+</div>
+                                    <div class="stat-label">Projects Completed</div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">5+</div>
+                                    <div class="stat-label">Technologies</div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Passion</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Cards Section -->
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 d-flex align-items-stretch">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="card-title">Blockchain</h2>
-                        <p class="card-text flex-grow-1">I have been deeply immersed in the blockchain space for several years, constantly exploring its evolving potential in finance, decentralization, and smart contracts. From early exposure to crypto and DeFi to hands-on experience with blockchain development, I have developed a strong foundation in Web3 technologies. My passion for this field continues to grow, and I aspire to pursue a career in blockchain, leveraging its power to innovate and shape the future of digital economies.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a class="btn btn-primary btn-sm" href="#">More Info</a>
-                    </div>
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <div class="section-divider"></div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="card-title">Leadership</h2>
-                        <p class="card-text flex-grow-1">As a Project Director for Hall Camps, I have led and managed teams to execute successful large-scale events, ensuring seamless coordination and impactful experiences. My leadership experience extends beyond organizing camps—I have spearheaded multiple projects, working with diverse teams to drive innovation and execution. I thrive in dynamic, high-energy environments, where I can lead, inspire, and collaborate to achieve meaningful goals.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a class="btn btn-primary btn-sm" href="#">More Info</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h2 class="card-title">Business</h2>
-                        <p class="card-text flex-grow-1">With an entrepreneurial mindset, I am passionate about starting and working on projects that excite me. I believe in turning ideas into reality and am always exploring opportunities to launch my own business in the future. Whether it's building tech-driven solutions or working on innovative startups, I enjoy the process of creating, iterating, and scaling ideas into impactful ventures.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a class="btn btn-primary btn-sm" href="#">More Info</a>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>Tech Intern</h4>
+                                    <span class="company">Giftano</span>
+                                    <span class="duration">June 2025 - Present</span>
+                                </div>
+                                <ul class="timeline-description">
+                                    <li>Working on automating data processing workflows to support data visualisation and reporting</li>
+                                    <li>Built and maintained backend systems using multiple databases, including MongoDB, PostgreSQL, and MySQL</li>
+                                    <li>Support diverse data storage and retrieval needs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>Blockchain Developer</h4>
+                                    <span class="company">NUS Fintech Society</span>
+                                    <span class="duration">Oct 2024 - May 2025</span>
+                                </div>
+                                <ul class="timeline-description">
+                                    <li>Working on building and integrating decentralized applications, smart contracts, and blockchain solutions</li>
+                                    <li>Hands-on experience with Web3 technologies, including Ethereum and Solana</li>
+                                    <li>Contributing to fintech projects that bridge traditional finance with decentralized systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>Intelligence Specialist</h4>
+                                    <span class="company">National Service</span>
+                                    <span class="duration">Mar 2021 - Feb 2023</span>
+                                </div>
+                                <ul class="timeline-description">
+                                    <li>Developed machine learning models for cameras to detect and label objects and vehicles</li>
+                                    <li>Utilized Power BI to create dashboards for streamlined and effective data visualization</li>
+                                    <li>Employed mapping software like Pix4D and ArcGIS to accurately map terrains for intelligence operations</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                                </div>
+                            </div>
+                            <i class="fas fa-dumbbell project-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Gymmates</h4>
+                            <p class="text-muted">Feb 2025 - May 2025</p>
+                            <p>Aims to foster a strong fitness community by bringing friends together to support each other on their workout journey. Features include workout sharing, a web app for discovering new routines, and encouraging/challenging one another to stay connected and motivated.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                                </div>
+                            </div>
+                            <i class="fas fa-chart-line project-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>DegenTracking</h4>
+                            <p class="text-muted">Jan 2025 - Present</p>
+                            <p>A Telegram bot designed to track cryptocurrency portfolios seamlessly. Integrates with wallets like Phantom and MetaMask, allowing users to view token holdings and total USD value with detailed PnL insights.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Telegram API</span>
+                                <span class="tech-tag">Web3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-sm btn-primary">View Project</a>
+                                </div>
+                            </div>
+                            <i class="fas fa-ticket-alt project-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>GigSwap</h4>
+                            <p class="text-muted">May 2024 - Aug 2024</p>
+                            <p>A comprehensive Telegram bot for ticket buyers and sellers, offering seamless transaction processes. Allows sellers to list tickets with details and buyers to browse and select tickets efficiently.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Telegram Bot</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Solidity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-server"></i> Backend Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-palette"></i> Frontend Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-chart-bar"></i> Data Analysis</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-cogs"></i> Data Engineering</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Apache Airflow</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-paint-brush"></i> UI/UX Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead">I'm always interested in new opportunities and collaborations!</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <h5>Email</h5>
+                                <p><a href="mailto:totallyregi@gmail.com">totallyregi@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-item">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <h5>Phone</h5>
+                                <p><a href="tel:+6596785748">+65 96785748</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 text-center mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin contact-icon"></i>
+                                <h5>LinkedIn</h5>
+                                <p><a href="https://www.linkedin.com/in/reginald-yang-75005a267/" target="_blank">Connect with me</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-12 text-center">
+                            <div class="cta-section" data-aos="fade-up">
+                                <h3>Let's Work Together!</h3>
+                                <p class="mb-4">I'm currently looking for internship opportunities and exciting projects to work on.</p>
+                                <a href="mailto:totallyregi@gmail.com" class="btn btn-primary btn-lg">Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container px-4 px-lg-5">
-            <p class="m-0 text-center text-white">Copyright &copy; Regi's Website 2025</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Reginald Lucas Yang Li Di. All rights reserved.</p>
+                    <p class="text-muted">Built with ❤️ and modern web technologies</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
