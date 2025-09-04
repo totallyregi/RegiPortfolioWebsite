@@ -76,15 +76,6 @@ function initNavigation() {
 
 // Scroll effects
 function initScrollEffects() {
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroSection = document.querySelector('.hero-section');
-        if (heroSection) {
-            heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-    
     // Reveal animations on scroll
     const observerOptions = {
         threshold: 0.1,

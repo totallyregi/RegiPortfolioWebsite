@@ -2,19 +2,19 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --dark-color: #2d3748;
-    --light-color: #f7fafc;
-    --text-color: #2d3748;
-    --text-muted: #718096;
+    --primary-color: #1e3a8a;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
     --border-color: #e2e8f0;
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    --gradient-accent: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
     --transition: all 0.3s ease;
 }
 
@@ -30,6 +30,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
+    padding-top: 80px; /* Account for fixed navbar */
 }
 
 /* Typography */
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -51,6 +52,11 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(10px);
     transition: var(--transition);
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 #mainNav.scrolled {
@@ -61,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -86,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%);
     transition: var(--transition);
     transform: translateX(-50%);
 }
@@ -97,10 +103,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     color: white;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: -80px; /* Offset the body padding */
+    padding-top: 80px; /* Add padding to account for navbar */
 }
 
 .hero-section::before {
@@ -123,6 +134,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
 }
 
 .hero-content h2 {
@@ -130,12 +143,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease 0.2s both;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease 0.4s both;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -148,10 +166,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     transition: var(--transition);
     border: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     color: white;
 }
 
@@ -164,6 +184,8 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid white;
     color: white;
     background: transparent;
+    backdrop-filter: blur(5px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-outline-primary:hover {
@@ -208,6 +230,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     transition: var(--transition);
     font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .social-link:hover {
@@ -222,12 +246,22 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .scroll-indicator a {
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Section Styles */
@@ -238,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -250,6 +284,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--gradient-primary);
     margin: 0 auto 3rem;
     border-radius: 2px;
+    background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%);
 }
 
 /* About Section */
@@ -300,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -324,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--gradient-primary);
+    background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
     transform: translateX(-50%);
 }
 
@@ -367,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     width: 20px;
     height: 20px;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     border-radius: 50%;
     transform: translateY(-50%);
 }
@@ -423,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-image {
     height: 200px;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -518,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-tag {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -599,7 +634,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 2rem;
     width: 50px;
     height: 50px;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     color: white;
     border: none;
     border-radius: 50%;
