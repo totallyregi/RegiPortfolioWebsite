@@ -131,11 +131,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: white;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 .hero-content h2 {
@@ -484,10 +487,11 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     opacity: 0;
     transition: var(--transition);
+    pointer-events: none;
 }
 
 .project-card:hover .project-overlay {
-    opacity: 1;
+    opacity: 0;
 }
 
 .project-content {
@@ -694,7 +698,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        white-space: normal;
+        line-height: 1.2;
     }
     
     .hero-content h2 {
@@ -735,7 +741,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 576px) {
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        white-space: normal;
+        line-height: 1.2;
     }
     
     .hero-buttons {
