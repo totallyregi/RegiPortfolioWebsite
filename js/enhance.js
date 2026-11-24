@@ -138,48 +138,34 @@ export function initCards() {
             card.addEventListener('pointerleave', () => { card.style.transform = ''; });
         }
 
-    });
-}
-
-/* ---------- Live site embeds: real sites, scaled down, loaded when near view ---------- */
-export function initEmbeds() {
-    const views = [...document.querySelectorAll('.embed-view[data-src]')];
-    if (!views.length) return;
-    const DESKTOP_WIDTH = 1280; // render each site as if on a laptop, then scale to fit
-
-    function fit(view) {
-        const iframe = view.querySelector('iframe');
-        if (!iframe) return;
-        const scale = view.clientWidth / DESKTOP_WIDTH;
-        iframe.style.transform = `scale(${scale})`;
-        iframe.style.height = `${Math.ceil(view.clientHeight / scale)}px`;
-    }
-
-    function load(view) {
-        if (view.querySelector('iframe')) return;
-        const iframe = document.createElement('iframe');
-        iframe.src = view.dataset.src;
-        iframe.title = view.dataset.title || 'Live site';
-        iframe.loading = 'lazy';
-        iframe.tabIndex = -1;
-        iframe.setAttribute('aria-hidden', 'true');
-        iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms');
-        iframe.style.width = `${DESKTOP_WIDTH}px`;
-        iframe.addEventListener('load', () => view.classList.add('loaded'));
-        view.append(iframe);
-        fit(view);
-    }
-
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            io.unobserve(entry.target);
-            load(entry.target);
+        const art = card.querySelector('.project-art[data-preview]');
+        if (!art) return;
+        let timer = 0, frame = null;
+        art.addEventListener('pointerenter', () => {
+            timer = setTimeout(() => {
+                if (!frame) {
+                    frame = document.createElement('div');
+                    frame.className = 'live-preview';
+                    const iframe = document.createElement('iframe');
+                    iframe.src = art.dataset.preview;
+                    iframe.title = 'Live preview';
+                    iframe.loading = 'lazy';
+                    iframe.tabIndex = -1;
+                    iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+                    const scale = art.clientWidth / 1280;
+                    iframe.style.transform = `scale(${scale})`;
+                    iframe.style.height = `${art.clientHeight / scale}px`;
+                    frame.append(iframe);
+                    const tag = document.createElement('span'); tag.className = 'preview-tag'; tag.textContent = 'Live preview';
+                    frame.append(tag);
+                    iframe.addEventListener('load', () => frame.classList.add('loaded'));
+                    art.append(frame);
+                }
+                frame.classList.add('show');
+            }, 450);
         });
-    }, { rootMargin: '400px 0px' });
-    views.forEach((v) => io.observe(v));
-    const ro = new ResizeObserver((entries) => entries.forEach((e) => fit(e.target)));
-    views.forEach((v) => ro.observe(v));
+        art.addEventListener('pointerleave', () => { clearTimeout(timer); frame?.classList.remove('show'); });
+    });
 }
 
 /* ---------- Experience: pipeline line draws itself as you scroll ---------- */

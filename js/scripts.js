@@ -1,6 +1,6 @@
 import { initPipeline } from './pipeline.js';
 import { initConsole } from './console.js';
-import { initTheme, initPalette, initCards, initTimeline, initEmbeds } from './enhance.js';
+import { initTheme, initPalette, initCards, initTimeline } from './enhance.js';
 
 const motionUrl = 'https://cdn.jsdelivr.net/npm/motion@13.2.0/+esm';
 document.documentElement.classList.add('motion-ready');
@@ -127,7 +127,6 @@ const sqlConsole = initConsole();
 const theme = initTheme();
 initPalette({ openConsole: sqlConsole.open, toggleTheme: theme.toggle, showToast });
 initCards();
-initEmbeds();
 initTimeline();
 initSectionTracking();
 initMotion();
