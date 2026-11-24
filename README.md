@@ -20,7 +20,7 @@ Honours `prefers-reduced-motion`.
 | Project | Live | Code |
 | --- | --- | --- |
 | Rhythm — AI Smart Calendar | [ai-smart-calendar-nine.vercel.app](https://ai-smart-calendar-nine.vercel.app) | [GitHub](https://github.com/totallyregi/AISmartCalendar) |
-| AutoWallet | — | [GitHub](https://github.com/totallyregi/AutoWallet) |
+| AutoWallet | [autowallet.site](https://www.autowallet.site/) | [GitHub](https://github.com/totallyregi/AutoWallet) |
 | EPL Match Predictor | [epl-predictor-two.vercel.app](https://epl-predictor-two.vercel.app) | [GitHub](https://github.com/totallyregi/EPLPredictor) |
 | Stock Price Predictor (team) | — | [GitHub](https://github.com/w1nsl/stock-prediction) |
 | Trippy (team) | — | [GitHub](https://github.com/Michelsim01/Trippy) |
