@@ -11,6 +11,7 @@ Plain HTML, CSS and a small ES module. No build step.
 - `index.html` — all content (hero, about + impact stats, experience, projects, toolkit, contact)
 - `css/styles.css` — design tokens in `:root` (paper / ink / coral / lime / blue), Manrope + DM Mono + serif italics
 - `js/scripts.js` — scroll progress, mobile nav, scroll-reveal via [Motion](https://motion.dev) (loaded from CDN, degrades gracefully), stat count-up, copy-email toast
+- `assets/Reginald_Yang_Resume.pdf` — résumé linked from the nav, hero and contact
 - `images/` — portrait (`portrait-1400.jpg`, resized from `profile.JPG`), about photo, project art
 
 Honours `prefers-reduced-motion`.
