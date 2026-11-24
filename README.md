@@ -14,6 +14,12 @@ Plain HTML, CSS and a small ES module. No build step.
 - `assets/Reginald_Yang_Resume.pdf` — résumé linked from the nav, hero and contact
 - `images/` — portrait (`portrait-1400.jpg`, resized from `profile.JPG`), about photo, project art
 
+- `js/pipeline.js` — hero canvas: data packets flowing through an ETL pipeline, attracted to the cursor
+- `js/console.js` — "Query my résumé" SQL console (sql.js / SQLite in WebAssembly, lazy-loaded from jsDelivr). Edit the `SCHEMA` string to update its data
+- `js/enhance.js` — ⌘K command palette, dark mode with View Transitions circular reveal, 3D card tilt + glare + live demo previews, scroll-drawn experience timeline
+
+Shortcuts: `⌘K` / `Ctrl+K` or `/` opens the palette, `` ` `` toggles the SQL console.
+
 Honours `prefers-reduced-motion`.
 
 ## Featured projects
