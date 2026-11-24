@@ -483,3 +483,7 @@ body:has(.sql-console[open]) .console-fab { opacity: 0; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
     .has-timeline .experience-item .company-name, .has-timeline .experience-item .experience-main > p, .has-timeline .experience-item .experience-details { opacity: 1 !important; }
 }
+
+/* Taller screenshot cards for live-demo projects */
+.project-card:not(.project-featured) .project-art.shot { height: 300px; padding-top: 56px; }
+@media (max-width: 640px) { .project-card:not(.project-featured) .project-art.shot { height: 240px; } }
