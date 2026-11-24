@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
-    <link rel="stylesheet" href="css/styles.css?v=13">
+    <link rel="stylesheet" href="css/styles.css?v=14">
 </head>
 <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -233,8 +233,8 @@
                         </a>
                         <div class="project-info">
                             <div><span class="project-number">03</span><h3>EPL Match Predictor</h3></div>
-                            <p>Pulls five seasons of Premier League data, engineers form, head-to-head, and home-advantage features, and serves Poisson-based win probabilities and expected scorelines through a FastAPI backend and a Next.js dashboard.</p>
-                            <div class="tag-row"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>Poisson model</span></div>
+                            <p>A self-refreshing FastAPI service pulls four seasons of live Premier League results and fits a Dixon-Coles Poisson model with opponent-adjusted, recency-weighted team ratings, serving win probabilities, xG and likeliest scores to a Next.js dashboard. Beats a home-win baseline 50% to 41% in walk-forward backtests.</p>
+                            <div class="tag-row"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>Dixon-Coles</span></div>
                             <div class="project-links">
                                 <a class="pill-link pill-solid" href="https://epl-predictor-two.vercel.app" target="_blank" rel="noreferrer">Live demo <span aria-hidden="true">↗</span></a>
                                 <a class="pill-link" href="https://github.com/totallyregi/EPLPredictor" target="_blank" rel="noreferrer"><svg><use href="#i-github"/></svg> Code</a>
@@ -352,6 +352,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="js/scripts.js?v=13"></script>
+    <script type="module" src="js/scripts.js?v=14"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ CREATE TABLE projects (name TEXT, category TEXT, stack TEXT, live INTEGER, team 
 INSERT INTO projects VALUES
  ('Rhythm','Productivity','Next.js, TypeScript, Supabase, OpenAI, Gemini',1,0,'https://ai-smart-calendar-nine.vercel.app','https://github.com/totallyregi/AISmartCalendar'),
  ('AutoWallet','FinTech','Next.js, Prisma, PostgreSQL, Gemini',1,0,'https://www.autowallet.site/','https://github.com/totallyregi/AutoWallet'),
- ('EPL Match Predictor','Sports ML','Python, FastAPI, Next.js, Poisson model',1,0,'https://epl-predictor-two.vercel.app','https://github.com/totallyregi/EPLPredictor'),
+ ('EPL Match Predictor','Sports ML','Python, FastAPI, Next.js, Dixon-Coles Poisson',1,0,'https://epl-predictor-two.vercel.app','https://github.com/totallyregi/EPLPredictor'),
  ('Stock Price Predictor','Data Science','Airflow, Python, PostgreSQL, Docker',0,1,NULL,'https://github.com/w1nsl/stock-prediction'),
  ('Trippy','Travel','React, Spring Boot, PostgreSQL, Stripe',0,1,NULL,'https://github.com/Michelsim01/Trippy');
 
