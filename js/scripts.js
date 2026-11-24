@@ -70,6 +70,53 @@ function initSectionTracking() {
     sections.forEach((section) => observer.observe(section));
 }
 
+function showToast(message) {
+    const toast = document.querySelector('#toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(showToast.timer);
+    showToast.timer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+function initCopyButtons() {
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+        button.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(button.dataset.copy);
+                showToast('Email copied ✓');
+            } catch {
+                window.location.href = `mailto:${button.dataset.copy}`;
+            }
+        });
+    });
+}
+
+function initCounters() {
+    const counters = document.querySelectorAll('[data-count]');
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            observer.unobserve(entry.target);
+            const element = entry.target;
+            const target = Number(element.dataset.count);
+            const suffix = element.textContent.replace(/[0-9]/g, '');
+            const start = performance.now();
+            const tick = (now) => {
+                const t = Math.min((now - start) / 1100, 1);
+                const eased = 1 - Math.pow(1 - t, 3);
+                element.textContent = `${Math.round(target * eased)}${suffix}`;
+                if (t < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        });
+    }, { threshold: 0.6 });
+    counters.forEach((counter) => observer.observe(counter));
+}
+
 initNavigation();
+initCopyButtons();
+initCounters();
 initSectionTracking();
 initMotion();

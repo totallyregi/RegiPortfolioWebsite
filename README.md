@@ -1,123 +1,36 @@
-# Reginald Lucas Yang Li Di - Portfolio
+# Reginald Yang — Portfolio
 
-A modern, dynamic portfolio website showcasing my skills, experience, and projects in technology and blockchain development.
+Live: **https://totallyregi.github.io/RegiPortfolioWebsite/**
 
-## 🚀 Features
+A single-page portfolio for data engineering, analytics, and AI-enabled product work.
 
-- **Modern Design**: Clean, professional design with gradient backgrounds and smooth animations
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Interactive Elements**: Smooth scrolling, hover effects, and animated components
-- **Professional Sections**: Hero, About, Experience, Projects, Skills, and Contact sections
-- **Performance Optimized**: Fast loading with optimized animations and smooth interactions
+## Stack
 
-## 🛠️ Technologies Used
+Plain HTML, CSS and a small ES module. No build step.
 
-- **HTML5**: Semantic markup structure
-- **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
-- **JavaScript (ES6+)**: Interactive functionality and animations
-- **Bootstrap 5**: Responsive framework for layout and components
-- **Font Awesome**: Icons for enhanced visual appeal
-- **AOS Library**: Animate On Scroll library for smooth animations
+- `index.html` — all content (hero, about + impact stats, experience, projects, toolkit, contact)
+- `css/styles.css` — design tokens in `:root` (paper / ink / coral / lime / blue), Manrope + DM Mono + serif italics
+- `js/scripts.js` — scroll progress, mobile nav, scroll-reveal via [Motion](https://motion.dev) (loaded from CDN, degrades gracefully), stat count-up, copy-email toast
+- `images/` — portrait (`portrait-1400.jpg`, resized from `profile.JPG`), about photo, project art
 
-## 📁 Project Structure
+Honours `prefers-reduced-motion`.
 
-```
-IS3106Portfolio/
-├── index.html          # Main HTML file
-├── css/
-│   └── styles.css      # Custom CSS styles
-├── js/
-│   └── scripts.js      # JavaScript functionality
-├── images/
-│   └── profile.JPG     # Profile image
-├── assets/
-│   └── favicon.ico     # Website favicon
-└── README.md           # Project documentation
-```
+## Featured projects
 
-## 🎨 Design Features
+| Project | Live | Code |
+| --- | --- | --- |
+| Rhythm — AI Smart Calendar | [ai-smart-calendar-nine.vercel.app](https://ai-smart-calendar-nine.vercel.app) | [GitHub](https://github.com/totallyregi/AISmartCalendar) |
+| AutoWallet | — | [GitHub](https://github.com/totallyregi/AutoWallet) |
+| EPL Match Predictor | [epl-predictor-two.vercel.app](https://epl-predictor-two.vercel.app) | [GitHub](https://github.com/totallyregi/EPLPredictor) |
+| Stock Price Predictor (team) | — | [GitHub](https://github.com/w1nsl/stock-prediction) |
+| Trippy (team) | — | [GitHub](https://github.com/Michelsim01/Trippy) |
 
-### Color Scheme
-- **Primary**: Purple gradient (#667eea to #764ba2)
-- **Secondary**: Pink gradient (#f093fb to #f5576c)
-- **Accent**: Blue gradient (#4facfe to #00f2fe)
-- **Text**: Dark gray (#2d3748)
-- **Background**: Light gray (#f7fafc)
+## Editing
 
-### Typography
-- **Font Family**: Inter (with system font fallbacks)
-- **Headings**: Bold weight with gradient text effects
-- **Body Text**: Clean, readable typography
+- **Add a project:** copy an `<article class="project-card">` block in `#projects`. Add a `.live-badge` inside `.project-art` and `.pill-link` buttons in `.project-links` when there's a demo or repo.
+- **Bust caches after CSS/JS changes:** bump `?v=` on the stylesheet and script tags.
+- **Preview locally:** open `index.html`, or run `python3 -m http.server` and visit `localhost:8000`.
 
-### Animations
-- **Scroll Animations**: Elements animate in as they come into view
-- **Hover Effects**: Interactive hover states on cards and buttons
-- **Typing Effect**: Hero title animates with typing effect
-- **Parallax**: Subtle parallax effect on hero section
-- **Loading Animations**: Smooth loading transitions
+## Contact
 
-## 📱 Responsive Design
-
-The portfolio is fully responsive and optimized for:
-- **Desktop**: Full layout with side-by-side content
-- **Tablet**: Adjusted spacing and layout
-- **Mobile**: Stacked layout with mobile-optimized navigation
-
-## 🔧 Customization
-
-### Colors
-Update the CSS custom properties in `css/styles.css`:
-```css
-:root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    /* ... other colors */
-}
-```
-
-### Content
-- Update personal information in `index.html`
-- Modify project details and descriptions
-- Add or remove sections as needed
-- Update contact information and social links
-
-### Animations
-- Adjust animation timing in `js/scripts.js`
-- Modify AOS (Animate On Scroll) settings
-- Customize hover effects and transitions
-
-## 🚀 Getting Started
-
-1. **Clone or Download** the project files
-2. **Open** `index.html` in a web browser
-3. **Customize** the content to match your information
-4. **Deploy** to your preferred hosting service
-
-## 📧 Contact Information
-
-- **Email**: totallyregi@gmail.com
-- **Phone**: +65 96785748
-- **LinkedIn**: [Reginald Yang](https://www.linkedin.com/in/reginald-yang-75005a267/)
-
-## 🎯 Professional Summary
-
-I'm a Year 2 undergraduate at the National University of Singapore (NUS), pursuing a degree in Information Systems. I'm passionate about technology and innovation, always looking for opportunities to build projects that solve real-world problems. With a deep interest in Web3 and blockchain, I hope to further delve into this field in the future while continuing to explore innovative tech solutions.
-
-## 💼 Key Skills
-
-- **Programming Languages**: Java, Python, JavaScript, Solidity
-- **Backend Development**: MongoDB, MySQL, PostgreSQL
-- **Frontend Development**: HTML, CSS, React
-- **Data Analysis**: Excel, R, Power BI, Tableau
-- **Data Engineering**: Apache Airflow
-- **UI/UX Development**: Figma
-
-## 🏆 Featured Projects
-
-1. **Gymmates** - Fitness community web app
-2. **DegenTracking** - Cryptocurrency portfolio tracker
-3. **GigSwap** - Ticket exchange platform
-
----
-
-*Built with ❤️ and modern web technologies*
+totallyregi@gmail.com · [LinkedIn](https://www.linkedin.com/in/reginald-yang-75005a267/) · [GitHub](https://github.com/totallyregi)
